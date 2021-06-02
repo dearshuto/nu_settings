@@ -1,0 +1,3 @@
+complete_from_path = true
+completion_mode = "list"
+prompt = "starship prompt"
