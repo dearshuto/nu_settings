@@ -1,3 +1,12 @@
 complete_from_path = true
 completion_mode = "list"
 prompt = "starship prompt"
+rm_always_trash = true
+
+[line_editor]
+completion_type = "fuzzy"
+auto_add_history = true
+tab_stop = 4
+
+startup = [
+    ]
