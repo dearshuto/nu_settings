@@ -75,15 +75,22 @@ module completions {
 
   export extern "git fetch" []
 
-  export extern "git cherry-pick" []
+  export extern "git cherry-pick" [
+  commit: string
+  ]
 
   export extern "git branch" [
     branch?: string@"nu-complete git branches" # name of the branch to checkout
     -d
+    -D
+    -m
   ]
 
   export extern "git rebase" [
        branch?: string@"nu-complete git remote-branches" #
+       -i
+       --continue
+       --abort
   ]
 
   export extern "git remote prune" [
@@ -143,6 +150,18 @@ module completions {
     --push-option(-o): string                  # option to transmit
     --ipv4(-4)                                 # use IPv4 addresses only
     --ipv6(-6)                                 # use IPv6 addresses only
+  ]
+
+  export extern "cargo run" [
+    --bin: string
+    --example: string
+    --features: string
+    --release 
+  ]
+
+  export extern "cargo build" [
+    --release
+    --lib
   ]
 }
 
