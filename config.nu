@@ -112,6 +112,7 @@ module completions {
     --release
     --lib
     --bin: string
+    --example: string
   ]
 }
 
