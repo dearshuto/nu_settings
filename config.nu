@@ -1,4 +1,6 @@
-use ./nu_scripts/custom-completions/git/git-completions.nu *
+# ~/.config/nushell/nu_scripts 以下のモジュールをロード
+use 'custom-completions/git/git-completions.nu' *
+use 'custom-completions/cargo/cargo-completions.nu' *
 
 def "nu-complete git branches" [] {
   ^git branch | lines | each { |line| $line | str replace '\* ' "" | str trim }
@@ -42,24 +44,7 @@ module completions {
   export extern "git remote prune" [
     remote?: string@"nu-complete git remotes", # the name of the remote
   ]
-
- export extern "cargo run" [
-    --bin: string
-    --example: string
-    --features: string
-    --release: string
-    --target: string
-  ]
-
-  export extern "cargo build" [
-    --release
-    --lib
-    --bin: string
-    --example: string
-    --target: string
- ]
 }
 
 # Get just the extern definitions without the custom completion commands
 use completions *
-
