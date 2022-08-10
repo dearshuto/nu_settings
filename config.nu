@@ -44,6 +44,13 @@ module completions {
   export extern "git remote prune" [
     remote?: string@"nu-complete git remotes", # the name of the remote
   ]
+  
+  export extern "cargo tauri dev" [
+    --help
+    --release
+    --runner: string
+    --target: string
+  ]
 }
 
 # Get just the extern definitions without the custom completion commands
