@@ -9,7 +9,7 @@ def create_left_prompt [] {
 }
 
 def create_right_prompt [] {
-    let time_segment = (date now | date format '%m/%d/%Y %r')
+    let time_segment = (date now | format date '%m/%d/%Y %r')
 
     $time_segment
 }
