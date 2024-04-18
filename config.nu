@@ -7,6 +7,11 @@ use 'custom-completions/git/git-completions.nu' *
 use 'custom-completions/cargo/cargo-completions.nu' *
 use 'custom-completions/rustup/rustup-completions.nu' *
 
+# a custom command that clean merged branches
+def git-branch-clean [] {
+  git branch --merged | rg "(refactor|feature)/.*" -o | lines | each {|branch| git branch -d $branch }
+}
+
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html
 # And here is the theme collection
