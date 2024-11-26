@@ -7,7 +7,10 @@ use 'custom-completions/bat/bat-completions.nu' *
 use 'custom-completions/curl/curl-completions.nu' *
 use 'custom-completions/git/git-completions.nu' *
 use 'custom-completions/cargo/cargo-completions.nu' *
+use 'custom-completions/npm/npm-completions.nu' *
+use 'custom-completions/rg/rg-completions.nu' *
 use 'custom-completions/rustup/rustup-completions.nu' *
+use 'custom-completions/ssh/ssh-completions.nu' *
 
 # git 管理外のカスタムコマンドをロードする仕組み
 # nushell.d/custom-command.nu があればその中身を全てロードする
