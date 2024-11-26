@@ -27,6 +27,9 @@ def git-branch-clean [] {
   git branch --merged | rg "(refactor|feature)/.*" -o | lines | each {|branch| git branch -d $branch }
 }
 
+# shell コマンドを利用する設定
+use std/dirs shells-aliases *
+
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html
 # And here is the theme collection
