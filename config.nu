@@ -47,3 +47,14 @@ def --env y [...args] {
 }
 
 source ./.zoxide.nu
+
+$env.config = ($env.config | upsert hooks {
+	env_change: {
+		PWD: [
+		{
+			code: {print "Hello Worl"}
+			
+		}
+		]
+	}
+})
