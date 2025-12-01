@@ -5,6 +5,7 @@
 # ~/.config/nushell/nu_scripts 以下のモジュールをロード
 use 'custom-completions/bat/bat-completions.nu' *
 use 'custom-completions/curl/curl-completions.nu' *
+use 'custom-completions/dotnet/dotnet-completions.nu' *
 use 'custom-completions/git/git-completions.nu' *
 use 'custom-completions/cargo/cargo-completions.nu' *
 use 'custom-completions/npm/npm-completions.nu' *
