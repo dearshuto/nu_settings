@@ -18,8 +18,9 @@ def git-branch-clean [] {
   git branch --merged | rg "(refactor|feature)/.*" -o | lines | each {|branch| git branch -d $branch }
 }
 
-# shell コマンドを利用する設定
-use std/dirs shells-aliases *
+# 標準ライブラリーの有効化
+# std/dirs によって shell コマンドのエイリアスも有効化される設定
+use std/dirs
 
 use ~/.cache/starship/init.nu
 
